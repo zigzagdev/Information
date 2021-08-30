@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Board extends Model
 {
     use HasFactory;
+
+    protected  $fillable = ['title','name','content'];
+
+    public function board()
+    {
+      return $this->hasMany(Comment::class);
+    }
+
 }
