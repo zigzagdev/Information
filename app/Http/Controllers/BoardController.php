@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Board;
 use Illuminate\Http\Request;
+use App\Http\Resources\BoardResource;
+use App\Models\Board;
 
 class BoardController extends Controller
 {
-    public function index()
+    public function getBoards()
     {
-      return Board::all();
+        return BoardResource::collection(Board::all());
     }
 }

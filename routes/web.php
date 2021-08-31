@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group( ['middleware' => 'api'], function(){
+    Route::get('', 'App\Http\Controllers\BoardController@getBoards');
 });
 
