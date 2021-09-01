@@ -9,7 +9,7 @@ class Board extends Model
 {
     use HasFactory;
 
-    protected  $fillable = ['title','name','content'];
+    protected  $fillable = ['title','name','description'];
 
     public function board()
     {

@@ -16,9 +16,11 @@ class BoardController extends Controller
 
     public function store(Request $request)
     {
+
         $board = new Board;
         $board->title = $request->title;
         $board->name = $request->name;
+        $board->description = $request->description;
         $board->save();
         return redirect('api/boards');
     }
