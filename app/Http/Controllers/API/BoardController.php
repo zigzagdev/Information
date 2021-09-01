@@ -24,4 +24,26 @@ class BoardController extends Controller
         $board->save();
         return redirect('api/boards');
     }
+
+    public function show($id)
+    {
+        $board = Board::find($id);
+        return $board ;
+    }
+    public function update(Request $request,$id)
+    {
+        $board = Board::find($id);
+        $board->title = $request->title;
+        $board->name = $request->name;
+        $board->description = $request->description;
+        $board->save();
+        return redirect('api/boards/'.$id);
+    }
+    public function destroy($id)
+    {
+       $board = Board::find($id);
+       $board->delete();
+       return('api/boards');
+    }
+
 }
