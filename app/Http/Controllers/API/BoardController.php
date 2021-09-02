@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Models\Board;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\BoardRequest;
 
 class BoardController extends Controller
 {
@@ -17,12 +18,18 @@ class BoardController extends Controller
     public function store(Request $request)
     {
 
+        $request->validate([
+            'title' => 'max:100',
+            'name' => 'max:30|alpha',
+            'description' => 'max:200',
+        ]);
+
         $board = new Board;
         $board->title = $request->title;
         $board->name = $request->name;
         $board->description = $request->description;
         $board->save();
-        return redirect('api/boards');
+        return response()->json(['message'=> 'Post was created successfully !'],201);
     }
 
     public function show($id)
@@ -37,13 +44,13 @@ class BoardController extends Controller
         $board->name = $request->name;
         $board->description = $request->description;
         $board->save();
-        return redirect('api/boards/'.$id);
+        return response()->json(['message'=> 'Post was updated successfully !'],201);
     }
     public function destroy($id)
     {
        $board = Board::find($id);
        $board->delete();
-       return('api/boards');
+       return response()->json(['message'=> 'Post was deleted successfully !'],201);
     }
 
 }
