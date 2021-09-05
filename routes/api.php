@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['middleware' => ['api']], function () {
+    Route::options('boards', function() {
+        return response()->json();
+    });
     Route::resource('boards', 'App\Http\Controllers\API\BoardController', ['except' => ['create', 'edit']]);
 });
+
+
 
