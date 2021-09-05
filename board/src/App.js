@@ -35,12 +35,7 @@ class App extends React.Component {
 
         return (
           <div>
-              <Header/>
-              <main>
-                <div className="App">
-                </div>
-              </main>
-              <Footer/>
+                <div className="App">Test</div>
           </div>
         );
     }
