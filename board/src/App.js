@@ -1,45 +1,29 @@
-import React  from 'react';
+import React,{ useState,useEffect } from 'react';
 import axios from 'axios';
-import Header from './components/Header';
-import Footer from "./components/Footer";
 
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            boards: []
-        };
-        this.getData = this.getData.bind(this);
-    }
+const baseURL = "http://127.0.0.1:8000/api/boards";
 
-    getData() {
-        axios
-            .get('http://localhost:8080/api/boards')
-            .then(results => {
-                const data = results.data;
-                console.log(data);
-                this.setState({
-                    boards: [...data]
-                });
-            });
-    }
 
-    render() {
-        const boards = this.state.boards.map(board => {
-            return <li key={board.id}>{board.title}
-                {board.name}
-                {board.description}
-            </li>
-        });
+export default function App() {
+    const [boards, setBoards] = useState([]);
+
+    useEffect(() => {
+        axios.get(baseURL)
+            .then((response) => {
+                setBoards(response.data);
+            })
+        }, [])
 
         return (
-          <div>
-                <div className="App">Test</div>
-          </div>
+            <div>
+              <ul>
+                {
+                  boards.map(board => <li key={board.id}> {board.title}{board.name}{board.description} </li>)
+                }
+              </ul>
+            </div>
         );
-    }
+
 }
 
-
-export default App;
