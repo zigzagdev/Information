@@ -21,7 +21,7 @@ class BoardController extends Controller
         $request->validate([
             'title' => 'max:100',
             'name' => 'max:30|alpha',
-            'description' => 'max:200',
+            'description' => 'max:200'
         ]);
 
         $board = new Board;
