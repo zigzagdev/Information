@@ -13,17 +13,16 @@ export default function App() {
             .then((response) => {
                 setBoards(response.data);
             })
-        }, [])
+    }, [])
 
-        return (
-            <div>
-              <ul>
+    return (
+        <div>
+            <ul>
                 {
-                  boards.map(board => <li key={board.id}> {board.title}{board.name}{board.description} </li>)
+                    boards.map(board => <li key={board.id}> {board.title}{board.name}{board.description} </li>)
                 }
-              </ul>
-            </div>
-        );
+            </ul>
+        </div>
+    );
 
 }
-
