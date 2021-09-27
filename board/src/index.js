@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import API from "./components/API"
+import API_Index from "./components/API_Index"
 
 ReactDOM.render(
   <React.StrictMode>
     <Header/>
-    <API />
+    <API_Index />
     <Footer/>
   </React.StrictMode>,
   document.getElementById('root')
