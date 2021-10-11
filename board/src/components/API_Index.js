@@ -1,11 +1,47 @@
 import React,{ useState,useEffect } from 'react';
-import {Button,Grid} from "@material-ui/core";
-import Paper from "@material-ui/core/Paper";
-import {Container} from "@material-ui/core";
+import {Button,Box,Card,Typography} from "@material-ui/core";
+import { useHistory } from "react-router-dom";
+
+const style ={
+    display: 'flex',
+    flexWrap:'wrap',
+    justifyContent:'space-between',
+    marginLeft: 7,
+    paddingTop:25,
+    cursor:'pointer',
+
+}
+
+
+const style2 = {
+    textAlign: 'center',
+    marginLeft:20,
+    marginRight: 20,
+    width: '18rem',
+    height: '18rem',
+    marginTop: 40,
+}
+
+
+const style3 = {
+    lineHeight: 3,
+    color: "#fff",
+    background: "#639",
+    display: 'block',
+    margin: 'auto',
+};
+
+const style4 ={
+    marginTop: 20,
+    color: 'red',
+
+}
+
 
 
 export default function API_Index() {
     const [boards, setBoards] = useState([]);
+    const history = useHistory();
 
     useEffect(()=> {
         fetch('http://127.0.0.1:8000/api/boards')
@@ -14,20 +50,21 @@ export default function API_Index() {
     },[])
 
     return (
-        <div>
+        <Box style={style}>
             {boards.map(board => (
-                <p key={board.id}>{board.description}
-                    <Container>
-                        <Grid container spacing={3}>
-                            <Grid item xs={12} sm={3} md={6}>
-                                <Paper>{board.title}</Paper>
-                            </Grid>
-                        </Grid>
-                    </Container>
-                </p>
+              <Card style={style2}>
+                <Typography style={style4}>
+                 {board.title}
+                </Typography>
+                  <Button
+                      style={style3}
+                      onClick={() => history.push(`/detail?id=${board.id}`)}
+                    >
+                      Jump
+                    </Button>
+                </Card>
             ))}
-        </div>
-
+        </Box>
     );
 
 }
