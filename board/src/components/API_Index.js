@@ -20,15 +20,18 @@ const style2 = {
     width: '18rem',
     height: '18rem',
     marginTop: 40,
+    display: "flex",
+    flexFlow: "column",
+    justifyContent: "space-between",
 }
 
 
 const style3 = {
     lineHeight: 3,
-    color: "#fff",
-    background: "#639",
-    display: 'block',
-    margin: 'auto',
+    color: "#000080",
+    background:'#00FFFF',
+    margin: '0 auto 40px',
+    display: 'flex',
 };
 
 const style4 ={
