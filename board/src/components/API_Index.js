@@ -57,7 +57,10 @@ export default function API_Index() {
             {boards.map(board => (
               <Card style={style2}>
                 <Typography style={style4}>
-                 {board.title}
+                  {board.title}
+                </Typography>
+                <Typography>
+                  {board.description}
                 </Typography>
                   <Button
                       style={style3}
