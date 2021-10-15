@@ -24,6 +24,7 @@ function AddBoard () {
 
   axios.post('http://127.0.0.1:8000/api/boards', data)
       .then(response => {
-          console.log('Post was created successfully !', response.data);
+          console.log('Post was created successfully in FrontScreen !', response.data);
       });
+
 }

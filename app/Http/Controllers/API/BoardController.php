@@ -20,7 +20,7 @@ class BoardController extends Controller
 
         $request->validate([
             'title' => 'max:100',
-            'name' => 'max:30|alpha',
+            'name' => 'required|max:30|regex:/^[0-9a-zA-Z]+$/',
             'description' => 'max:200'
         ]);
 
@@ -29,7 +29,7 @@ class BoardController extends Controller
         $board->name = $request->name;
         $board->description = $request->description;
         $board->save();
-        return response()->json(['message'=> 'Post was created successfully !'],201);
+        return response()->json(['message'=> 'Post was created successfully !'],['data'=>Board::all()],201);
     }
 
     public function show($id)

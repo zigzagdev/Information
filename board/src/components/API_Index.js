@@ -6,23 +6,23 @@ const style ={
     display: 'flex',
     flexWrap:'wrap',
     justifyContent:'space-between',
-    marginLeft: 7,
-    paddingTop:25,
-    cursor:'pointer',
+    // marginLeft: 7,
+    paddingTop:10,
+    // cursor:'pointer',
 
 }
 
 
 const style2 = {
     textAlign: 'center',
-    marginLeft:20,
-    marginRight: 20,
-    width: '18rem',
-    height: '18rem',
-    marginTop: 40,
+    marginLeft:10,
+    marginRight:10,
+    width: '12rem',
+    height: '12rem',
+    marginTop: 30,
     display: "flex",
     flexFlow: "column",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
 }
 
 
@@ -30,7 +30,7 @@ const style3 = {
     lineHeight: 3,
     color: "#000080",
     background:'#00FFFF',
-    margin: '0 auto 40px',
+    margin: '0 10px 10px',
     display: 'flex',
 };
 
