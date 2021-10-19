@@ -5,6 +5,7 @@ import { Container } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { Button,Card} from "@material-ui/core";
 
+
 const style = {
     minWidth: 16,
     lineHeight: 3,
@@ -67,7 +68,10 @@ export default function Detail() {
                       <Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20 }}>Title: {data.title}</Card>
                       <div style={{type: "text", height: '100px', fontSize: '30px', marginBottom: 20,textAlign:'center' }}>Content: {(data.description)}</div>
                     </Card>
-                    <Button style={style4}>Edit</Button>
+                    <Button
+                      style={style4}
+                      onClick={() => history.push(`/edit?id=${data.id}`)}
+                    >Edit</Button>
                   </Container>
 
         );
