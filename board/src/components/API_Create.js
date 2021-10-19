@@ -27,4 +27,13 @@ function AddBoard () {
           console.log('Post was created successfully in FrontScreen !', response.data);
       });
 
+  return(
+    <div>
+
+    </div>
+  )
+
+
 }
+
+
