@@ -31,7 +31,7 @@ const style3 = {
     marginLeft:'auto',
     marginRight:'auto',
     width: '49rem',
-    height: '24rem',
+    height: '20rem',
     marginTop: 70,
     display: "flex",
     flexFlow: "column",
@@ -57,13 +57,11 @@ export default function Detail() {
 
         return (
             <Container>
-                <Grid container spacing={6}>
                     <Card style={style3}>
-                        <div style={{type: "text", height: '80px', fontSize: '30px', marginBottom: 20}}>{data.name}</div>
-                        <div style={{type: "text", height: '60px', fontSize: '30px', marginBottom: 20}}>{data.title}</div>
-                        <div style={{type: "text", height: '60px', fontSize: '30px', marginBottom: 20}}>{(data.description)}</div>
+                        <Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20}}>Name: {data.name}</Card>
+                        <Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20 }}>Title: {data.title}</Card>
+                        <div style={{type: "text", height: '100px', fontSize: '30px', marginBottom: 20,textAlign:'center' }}>Content: {(data.description)}</div>
                     </Card>
-                </Grid>
             </Container>
         );
 }
