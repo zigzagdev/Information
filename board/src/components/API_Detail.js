@@ -1,10 +1,9 @@
 // here page is only show the detail Card .
 
 import React, { useEffect, useState } from "react";
-import Grid from "@material-ui/core/Grid";
 import { Container } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-import { Button,Card,Input} from "@material-ui/core";
+import { Button,Card} from "@material-ui/core";
 
 const style = {
     minWidth: 16,
@@ -37,6 +36,14 @@ const style3 = {
     flexFlow: "column",
     // justifyContent: "space-between",
 }
+const style4 = {
+    lineHeight: 3,
+    color: "#000080",
+    background:'#00FFFF',
+    textAlign: 'right',
+    marginRight: 'auto',
+    marginLeft: 1100,
+};
 
 
 export default function Detail() {
@@ -53,16 +60,16 @@ export default function Detail() {
             });
         }, []);
 
-    console.log(data)
-
         return (
-            <Container>
+                  <Container>
                     <Card style={style3}>
-                        <Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20}}>Name: {data.name}</Card>
-                        <Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20 }}>Title: {data.title}</Card>
-                        <div style={{type: "text", height: '100px', fontSize: '30px', marginBottom: 20,textAlign:'center' }}>Content: {(data.description)}</div>
+                      <Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20}}>Name: {data.name}</Card>
+                      <Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20 }}>Title: {data.title}</Card>
+                      <div style={{type: "text", height: '100px', fontSize: '30px', marginBottom: 20,textAlign:'center' }}>Content: {(data.description)}</div>
                     </Card>
-            </Container>
+                    <Button style={style4}>Edit</Button>
+                  </Container>
+
         );
 }
 
