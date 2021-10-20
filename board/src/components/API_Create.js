@@ -56,12 +56,12 @@ function API_Create () {
       <form onSubmit={saveBoard}>
         <Container>
           <Card style={style3}>
-            <div>
+            <div style={{textAlign:'left', marginLeft:'11px',marginTop:20,}}>
               <label>Author Name</label>
-              <input type="text" name="name" onChange={handleInput} value={board.title} className="form-control" />
-              <span>{board.name}</span>
+                <input type="text" name="name" style={{display:'flex',marginTop:8,width:260,height:30}} onChange={handleInput} placeholder={'sample'}/>
+                  <span className="text-danger" style={{color:'red'}}>{board.title}</span>
             </div>
-          {/*<Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20 }}>Title: {data.title}</Card>*/}
+              {/*<Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20 }}>Title: {data.title}</Card>*/}
           {/*  <div style={{type: "text", height: '100px', fontSize: '30px', marginBottom: 20,textAlign:'center' }}>Content: {(data.description)}</div>*/}
           </Card>
         {/*<Button*/}
