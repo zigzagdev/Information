@@ -56,10 +56,13 @@ function API_Create () {
       <form onSubmit={saveBoard}>
         <Container>
           <Card style={style3}>
-            <div style={{textAlign:'left', marginLeft:'11px',marginTop:20,}}>
-              <label>Author Name</label>
+            <div style={{textAlign:'left', marginLeft:'11px',marginTop:36,}}>
+              <label style={{fontFamily:'Arial',color:'gray'}}>Author Name</label>
+                <input type="text" name="name" style={{display:'flex',marginTop:8,marginBottom:19,width:260,height:30}} onChange={handleInput} placeholder={'sample'}/>
+              <label style={{fontFamily:'Arial',color:'blue',marginBottom: 20}}>News Title</label>
                 <input type="text" name="name" style={{display:'flex',marginTop:8,width:260,height:30}} onChange={handleInput} placeholder={'sample'}/>
-                  <span className="text-danger" style={{color:'red'}}>{board.title}</span>
+              <label style={{fontFamily:'Arial',color:'red',paddingTop:25,display:'flex'}}>Content</label>
+                <input type="textarea" name="name" style={{display:'flex',width:260,height:30,marginTop:11}} onChange={handleInput} placeholder={'sample'}/>
             </div>
               {/*<Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20 }}>Title: {data.title}</Card>*/}
           {/*  <div style={{type: "text", height: '100px', fontSize: '30px', marginBottom: 20,textAlign:'center' }}>Content: {(data.description)}</div>*/}
