@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory,Link } from "react-router-dom";
 import axios from "axios";
 import {Button, Card, Container} from "@material-ui/core";
-import {lightGreen} from "@material-ui/core/colors";
+
 
 const style3 = {
     textAlign: 'center',
@@ -15,6 +15,17 @@ const style3 = {
     flexFlow: "column",
     // justifyContent: "space-between",
 }
+const style4 = {
+    lineHeight: 3,
+
+    paddingRight:20,
+    paddingLeft:20,
+    color: "#000080",
+    background:'#00FFFF',
+    textAlign: 'center',
+    marginRight: 'auto',
+    marginLeft: 1100,
+};
 
 function API_Create () {
     const history = useHistory()
@@ -28,7 +39,7 @@ function API_Create () {
         e.persist();
         setBoard({...board, [e.target.name]: e.target.value})
     }
-    const saveBoard = (e) => {
+    const saveHere = (e) => {
         e.preventDefault();
 
         const data = {
@@ -42,9 +53,9 @@ function API_Create () {
                 if (response.data.status == 201) {
                     console.log('Post was created successfully in FrontScreen !', response.data);
                     setBoard({
-                        title: "",
-                        name: "",
-                        description: ""
+                        title: ' ',
+                        name: ' ',
+                        description: ' '
                     });
                     history.push('/');
                 } else {
@@ -53,7 +64,7 @@ function API_Create () {
             });
     }
   return(
-      <form onSubmit={saveBoard}>
+      <form onSubmit={saveHere}>
         <Container>
           <Card style={style3}>
             <div style={{textAlign:'left', marginLeft:'11px',marginTop:36,}}>
@@ -64,13 +75,15 @@ function API_Create () {
               <label style={{fontFamily:'Arial',color:'red',paddingTop:25,display:'flex'}}>Content</label>
                 <input type="textarea" name="name" style={{display:'flex',width:260,height:30,marginTop:11}} onChange={handleInput} placeholder={'sample'}/>
             </div>
-              {/*<Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20 }}>Title: {data.title}</Card>*/}
-          {/*  <div style={{type: "text", height: '100px', fontSize: '30px', marginBottom: 20,textAlign:'center' }}>Content: {(data.description)}</div>*/}
+            <div>
+              <button type="submit" style={{color: "#000080", background:'#00FFFF'}}>Save here</button>
+            </div>
           </Card>
-        {/*<Button*/}
-        {/*    style={style4}*/}
-        {/*    onClick={() => history.push(`/edit?id=${data.id}`)}*/}
-        {/*>Edit</Button>*/}
+        <Button
+            style={style4}
+            onClick={() => history.push('/')}
+        >Top
+        </Button>
     </Container>
 </form>
   );
