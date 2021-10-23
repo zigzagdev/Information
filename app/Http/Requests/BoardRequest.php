@@ -40,7 +40,7 @@ class BoardRequest extends FormRequest
           ],
           'name' => [
               'max:30',
-              'alpha'
+              'alpha_num'
           ],
           'description' =>[
               'max:150'

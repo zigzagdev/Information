@@ -417,7 +417,7 @@ function Axios(instanceConfig) {
  */
 Axios.prototype.request = function request(config) {
   /*eslint no-param-reassign:0*/
-  // Allow for axios('example/url'[, config]) a la fetch API
+  // Allow for axios('example/url'[, config]) a la fetch API_Index
   if (typeof config === 'string') {
     config = arguments[1] || {};
     config.url = arguments[0];
@@ -1886,7 +1886,7 @@ try {
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /**
- * Echo exposes an expressive API for subscribing to channels and listening
+ * Echo exposes an expressive API_Index for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
  * allows your team to easily build robust real-time web applications.
  */
@@ -8708,7 +8708,7 @@ for ( i in { submit: true, reset: true } ) {
 	Expr.pseudos[ i ] = createButtonPseudo( i );
 }
 
-// Easy API for creating new setFilters
+// Easy API_Index for creating new setFilters
 function setFilters() {}
 setFilters.prototype = Expr.filters = Expr.pseudos;
 Expr.setFilters = new setFilters();
@@ -10790,7 +10790,7 @@ var dataUser = new Data();
 
 //	Implementation Summary
 //
-//	1. Enforce API surface and semantic compatibility with 1.9.x branch
+//	1. Enforce API_Index surface and semantic compatibility with 1.9.x branch
 //	2. Improve the module's maintainability by reducing the storage
 //		paths to a single mechanism.
 //	3. Use the same single mechanism to support "private" and "user" data.
@@ -39424,7 +39424,7 @@ var didWarnValDefaultVal = false;
 
 /**
  * Implements a <textarea> host component that allows setting `value`, and
- * `defaultValue`. This differs from the traditional DOM API because value is
+ * `defaultValue`. This differs from the traditional DOM API_Index because value is
  * usually set as PCDATA children.
  *
  * If `value` is not supplied (or null/undefined), user actions that affect the
@@ -41124,8 +41124,8 @@ function restoreStateIfNeeded() {
 }
 
 // the renderer. Such as when we're dispatching events or if third party
-// libraries need to call batchedUpdates. Eventually, this API will go away when
-// everything is batched by default. We'll then have a similar API to opt-out of
+// libraries need to call batchedUpdates. Eventually, this API_Index will go away when
+// everything is batched by default. We'll then have a similar API_Index to opt-out of
 // scheduled work and instead do synchronous work.
 // Defaults
 
@@ -43594,7 +43594,7 @@ function createSyntheticEvent(Interface) {
    * event should be released into the pool after being dispatched. Users that
    * need a persisted event should invoke `persist`.
    *
-   * Synthetic events (and subclasses) implement the DOM Level 3 Events API by
+   * Synthetic events (and subclasses) implement the DOM Level 3 Events API_Index by
    * normalizing browser quirks. Subclasses do not necessarily have to implement a
    * DOM interface; custom application-specific events can also subclass this.
    */
@@ -45114,7 +45114,7 @@ function getModernOffsetsFromPoints(outerNode, anchorNode, anchorOffset, focusNo
  * Note: IE10+ supports the Selection object, but it does not support
  * the `extend` method, which means that even in modern IE, it's not possible
  * to programmatically create a backward selection. Thus, for all IE
- * versions, we use the old IE API to create our selections.
+ * versions, we use the old IE API_Index to create our selections.
  *
  * @param {DOMElement|DOMTextNode} node
  * @param {object} offsets
@@ -49027,7 +49027,7 @@ var ReactStrictModeWarnings = {
       try {
         setCurrentFiber(firstFiber);
 
-        error('Legacy context API has been detected within a strict-mode tree.' + '\n\nThe old API will be supported in all 16.x releases, but applications ' + 'using it should migrate to the new version.' + '\n\nPlease update the following components: %s' + '\n\nLearn more about this warning here: https://reactjs.org/link/legacy-context', sortedNames);
+        error('Legacy context API_Index has been detected within a strict-mode tree.' + '\n\nThe old API_Index will be supported in all 16.x releases, but applications ' + 'using it should migrate to the new version.' + '\n\nPlease update the following components: %s' + '\n\nLearn more about this warning here: https://reactjs.org/link/legacy-context', sortedNames);
       } finally {
         resetCurrentFiber();
       }
@@ -51527,7 +51527,7 @@ function ChildReconciler(shouldTrackSideEffects) {
     var created = createFiberFromPortal(portal, returnFiber.mode, lanes);
     created.return = returnFiber;
     return created;
-  } // This API will tag the children with the side-effect of the reconciliation
+  } // This API_Index will tag the children with the side-effect of the reconciliation
   // itself. They will be added to the side-effect list as we pass through the
   // children and the parent.
 
@@ -54915,7 +54915,7 @@ function finishClassComponent(current, workInProgress, Component, shouldUpdate, 
     // If we captured an error, but getDerivedStateFromError is not defined,
     // unmount all the children. componentDidCatch will schedule an update to
     // re-render a fallback. This is temporary until we migrate everyone to
-    // the new API.
+    // the new API_Index.
     // TODO: Warn in a future release.
     nextChildren = null;
 
@@ -56696,7 +56696,7 @@ var updateHostText$1;
       return;
     } // If we get updated because one of our children updated, we don't
     // have newProps so we'll have to reuse them.
-    // TODO: Split the update API as separate for the props vs. children.
+    // TODO: Split the update API_Index as separate for the props vs. children.
     // Even better would be if children weren't special cased at all tho.
 
 
@@ -59774,7 +59774,7 @@ function flushDiscreteUpdates() {
   // TODO: Should be able to flush inside batchedUpdates, but not inside `act`.
   // However, `act` uses `batchedUpdates`, so there's no way to distinguish
   // those two cases. Need to fix this before exposing flushDiscreteUpdates
-  // as a public API.
+  // as a public API_Index.
   if ((executionContext & (BatchedContext | RenderContext | CommitContext)) !== NoContext) {
     {
       if ((executionContext & RenderContext) !== NoContext) {
@@ -61669,7 +61669,7 @@ function finishPendingInteractions(root, committedLanes) {
       }
     });
   }
-} // `act` testing API
+} // `act` testing API_Index
 
 function shouldForceFlushFallbacksInDEV() {
   // Never force flush in production. This function should get stripped out.
@@ -62764,7 +62764,7 @@ function registerMutableSourceForHydration(root, mutableSource) {
   }
 }
 
-function createPortal(children, containerInfo, // TODO: figure out the API for cross-renderer implementation.
+function createPortal(children, containerInfo, // TODO: figure out the API_Index for cross-renderer implementation.
 implementation) {
   var key = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
   return {
@@ -63261,7 +63261,7 @@ function injectIntoDevTools(devToolsConfig) {
     scheduleRoot:  scheduleRoot ,
     setRefreshHandler:  setRefreshHandler ,
     // Enables DevTools to append owner stacks to error messages in DEV mode.
-    getCurrentFiber:  getCurrentFiberForDevTools 
+    getCurrentFiber:  getCurrentFiberForDevTools
   });
 }
 
@@ -63651,7 +63651,7 @@ function unstable_createPortal(children, container) {
     if (!didWarnAboutUnstableCreatePortal) {
       didWarnAboutUnstableCreatePortal = true;
 
-      warn('The ReactDOM.unstable_createPortal() alias has been deprecated, ' + 'and will be removed in React 18+. Update your code to use ' + 'ReactDOM.createPortal() instead. It has the exact same API, ' + 'but without the "unstable_" prefix.');
+      warn('The ReactDOM.unstable_createPortal() alias has been deprecated, ' + 'and will be removed in React 18+. Update your code to use ' + 'ReactDOM.createPortal() instead. It has the exact same API_Index, ' + 'but without the "unstable_" prefix.');
     }
   }
 
@@ -63875,7 +63875,7 @@ function printWarning(level, format, args) {
 
 // Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
 
-var enableScopeAPI = false; // Experimental Create Event Handle API.
+var enableScopeAPI = false; // Experimental Create Event Handle API_Index.
 
 function isValidElementType(type) {
   if (typeof type === 'string' || typeof type === 'function') {
@@ -65226,7 +65226,7 @@ function warnNoop(publicInstance, callerName) {
   }
 }
 /**
- * This is the abstract API for an update queue.
+ * This is the abstract API_Index for an update queue.
  */
 
 
@@ -65254,7 +65254,7 @@ var ReactNoopUpdateQueue = {
    *
    * @param {ReactClass} publicInstance The instance that should rerender.
    * @param {?function} callback Called after component is updated.
-   * @param {?string} callerName name of the calling function in the public API.
+   * @param {?string} callerName name of the calling function in the public API_Index.
    * @internal
    */
   enqueueForceUpdate: function (publicInstance, callback, callerName) {
@@ -65271,7 +65271,7 @@ var ReactNoopUpdateQueue = {
    * @param {ReactClass} publicInstance The instance that should rerender.
    * @param {object} completeState Next state.
    * @param {?function} callback Called after component is updated.
-   * @param {?string} callerName name of the calling function in the public API.
+   * @param {?string} callerName name of the calling function in the public API_Index.
    * @internal
    */
   enqueueReplaceState: function (publicInstance, completeState, callback, callerName) {
@@ -65287,7 +65287,7 @@ var ReactNoopUpdateQueue = {
    * @param {ReactClass} publicInstance The instance that should rerender.
    * @param {object} partialState Next partial state to be merged with state.
    * @param {?function} callback Called after component is updated.
-   * @param {?string} Name of the calling function in the public API.
+   * @param {?string} Name of the calling function in the public API_Index.
    * @internal
    */
   enqueueSetState: function (publicInstance, partialState, callback, callerName) {
@@ -66400,7 +66400,7 @@ function forwardRef(render) {
 
 // Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
 
-var enableScopeAPI = false; // Experimental Create Event Handle API.
+var enableScopeAPI = false; // Experimental Create Event Handle API_Index.
 
 function isValidElementType(type) {
   if (typeof type === 'string' || typeof type === 'function') {
@@ -68405,7 +68405,7 @@ if (false) {} else {
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -68419,20 +68419,20 @@ if (false) {} else {
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
@@ -68465,7 +68465,7 @@ if (false) {} else {
 /******/ 			return result;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -68477,7 +68477,7 @@ if (false) {} else {
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -68489,12 +68489,12 @@ if (false) {} else {
 /******/ 			}
 /******/ 		})();
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -68505,7 +68505,7 @@ if (false) {} else {
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -68514,11 +68514,11 @@ if (false) {} else {
 /******/ 			return module;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
-/******/ 		
+/******/
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
@@ -68526,19 +68526,19 @@ if (false) {} else {
 /******/ 			"/js/app": 0,
 /******/ 			"css/app": 0
 /******/ 		};
-/******/ 		
+/******/
 /******/ 		// no chunk on demand loading
-/******/ 		
+/******/
 /******/ 		// no prefetching
-/******/ 		
+/******/
 /******/ 		// no preloaded
-/******/ 		
+/******/
 /******/ 		// no HMR
-/******/ 		
+/******/
 /******/ 		// no HMR manifest
-/******/ 		
+/******/
 /******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
+/******/
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
 /******/ 			var [chunkIds, moreModules, runtime] = data;
@@ -68563,20 +68563,20 @@ if (false) {} else {
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
-/******/ 		
+/******/
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
-/******/ 	
+/******/
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+/******/
 /******/ })()
 ;
