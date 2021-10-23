@@ -48,8 +48,8 @@ class API_Create extends Component {
               .then(response => {
                 console.log(response)
               })
-              .catch(error => {
-                console.log(error)
+              .catch(({response}) => {
+                console.log('Error in your type...', response.message);
               })
     }
 
