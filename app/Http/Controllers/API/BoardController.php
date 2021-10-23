@@ -17,9 +17,8 @@ class BoardController extends Controller
 
     public function store(Request $request)
     {
-
         $request->validate([
-            'title' => 'max:100',
+            'title' => 'required|between:3,100',
             'name' => 'required|max:30|regex:/^[0-9a-zA-Z]+$/',
             'description' => 'max:200'
         ]);
