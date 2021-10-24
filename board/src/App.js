@@ -5,7 +5,8 @@ import API_Detail from "./components/API_Detail"
 import { BrowserRouter as Router,Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import API_Index from "./components/API_Index";
-import API_Create from "./components/API_Create"
+import API_Create from "./components/API_Create";
+import Edit_Delete from "./components/API_Edit";
 
 
 
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path="/create">
                 <API_Create />
+            </Route>
+            <Route path="/edit">
+                <Edit/>
             </Route>
             <Footer/>
         </Router>

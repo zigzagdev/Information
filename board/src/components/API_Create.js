@@ -51,7 +51,9 @@ class API_Create extends Component {
               .catch(({response}) => {
                 console.log('Error in your type...', response.message);
               })
+        this.props.history.push("/");
     }
+
 
 render(){
           const {name,title,description} = this.state
