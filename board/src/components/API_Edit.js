@@ -61,16 +61,22 @@ export default function Detail() {
 
     return (
         <Container>
+          <div style={{color:"red", lineHeight:2,}}>
+           <text>Here is Edit Page !!</text>
+          </div>
             <Card style={style3}>
                 <Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20}}>Name: {data.name}</Card>
                 <Card style={{type: "text", height: '90px', fontSize: '30px', marginBottom: 20 }}>Title: {data.title}</Card>
                 <div style={{type: "text", height: '100px', fontSize: '30px', marginBottom: 20,textAlign:'center' }}>Content: {(data.description)}</div>
             </Card>
-            <Button
+            <button
                 style={style4}
-                onClick={() => history.push(`/API_detail?id=${data.id}`)}
-            >Edit</Button>
+                onClick={() => history.push(`/detail?id=${data.id}`)}
+            >Submit</button>
         </Container>
 
     );
 }
+
+
+// 64行目に関してはのちに行間の調整を行う。
