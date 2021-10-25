@@ -1,34 +1,44 @@
 import React from "react";
-import {Box, Container, Row, Column, FooterLink, Heading } from "./FooterStyles";
+import {Link} from "@material-ui/core";
+
+
+const style ={
+    display: "flex",
+    flexDirection: 'column',
+    marginLeft: 1150,
+    marginTop: 70,
+}
+const style2 = {
+    position: "absolute",
+    display: "block",
+    flexDirection: 'column',
+    marginLeft: 1150,
+    marginTop: 20,
+}
+
+const back = {
+    width: '100%',
+    position: 'absolute',
+    bottom: 0,
+    background: 'gray',
+    height: '170px',
+}
+
+const style3 = {
+    marginBottom: 9,
+    color: "white",
+}
 
 const Footer = () => {
     return (
-        <Box>
-            <Container>
-                <Row>
-                    <Column>
-                        <Heading>About Us</Heading>
-                        <FooterLink href="#">Aim</FooterLink>
-                        <FooterLink href="#">Vision</FooterLink>
-                        <FooterLink href="#">Testimonials</FooterLink>
-                    </Column>
-                    <Column>
-                        <Heading>Services</Heading>
-                        <FooterLink href="#">Writing</FooterLink>
-                        <FooterLink href="#">Internships</FooterLink>
-                        <FooterLink href="#">Coding</FooterLink>
-                        <FooterLink href="#">Teaching</FooterLink>
-                    </Column>
-                    <Column>
-                        <Heading>Contact Us</Heading>
-                        <FooterLink href="#">Uttar Pradesh</FooterLink>
-                        <FooterLink href="#">Ahemdabad</FooterLink>
-                        <FooterLink href="#">Indore</FooterLink>
-                        <FooterLink href="#">Mumbai</FooterLink>
-                    </Column>
-                </Row>
-            </Container>
-        </Box>
+        <div style={back}>
+          <h1 style={style2}>About Us</h1>
+            <ul style={style}>
+              <Link href="#" style={style3}>Aim</Link>
+              <Link href="#" style={style3}>Vision</Link>
+              <Link href="#" style={style3}>Testimonials</Link>
+            </ul>
+        </div>
     );
 };
 export default Footer;

@@ -17,10 +17,9 @@ class BoardController extends Controller
 
     public function store(Request $request)
     {
-
         $request->validate([
-            'title' => 'max:100',
-            'name' => 'max:30|alpha',
+            'title' => 'required|between:3,100',
+            'name' => 'required|max:30|regex:/^[0-9a-zA-Z]+$/',
             'description' => 'max:200'
         ]);
 
@@ -44,13 +43,13 @@ class BoardController extends Controller
         $board->name = $request->name;
         $board->description = $request->description;
         $board->save();
-        return response()->json(['message'=> 'Post was updated successfully !'],201);
+        return response()->json(['message'=> 'Post was updated successfully !'],202);
     }
     public function destroy($id)
     {
        $board = Board::find($id);
        $board->delete();
-       return response()->json(['message'=> 'Post was deleted successfully !'],201);
+       return response()->json(['message'=> 'Post was deleted successfully !'],203);
     }
 
 }
